@@ -14,3 +14,17 @@ services:
         value: your_super_secret_key_change_this_in_production_123456
       - key: NODE_ENV
         value: production
+
+  - type: web
+    name: lostfound-frontend
+    env: node
+    region: oregon
+    plan: free
+    root_dir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run serve
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://lostfound-api.onrender.com/api
+      - key: NODE_ENV
+        value: production
