@@ -17,7 +17,6 @@ body {
   padding: 20px;
 }
 
-/* Navigation */
 nav {
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -53,7 +52,6 @@ nav button:hover {
   background: #c0392b;
 }
 
-/* Auth Forms */
 .auth-container {
   max-width: 400px;
   margin: 5rem auto;
@@ -133,7 +131,6 @@ nav button:hover {
   text-decoration: underline;
 }
 
-/* Dashboard */
 .dashboard {
   padding: 2rem 0;
 }
@@ -153,7 +150,6 @@ nav button:hover {
   padding-bottom: 0.5rem;
 }
 
-/* Add Item Form */
 .add-item-form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -206,7 +202,6 @@ nav button:hover {
   background: #7f8c8d;
 }
 
-/* Search Bar */
 .search-container {
   display: flex;
   gap: 1rem;
@@ -238,7 +233,6 @@ nav button:hover {
   background: #5568d3;
 }
 
-/* Items Grid */
 .items-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -363,7 +357,6 @@ nav button:hover {
   background: #c0392b;
 }
 
-/* Alert Messages */
 .alert {
   padding: 1rem;
   border-radius: 4px;
@@ -391,7 +384,6 @@ nav button:hover {
   border-left: 4px solid #3498db;
 }
 
-/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -452,14 +444,12 @@ nav button:hover {
   background: #7f8c8d;
 }
 
-/* Loading */
 .loading {
   text-align: center;
   padding: 2rem;
   color: #667eea;
 }
 
-/* Empty State */
 .empty-state {
   text-align: center;
   padding: 3rem;
@@ -471,7 +461,6 @@ nav button:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .auth-container {
     margin: 2rem 0;

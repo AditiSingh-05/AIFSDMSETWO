@@ -22,7 +22,6 @@ const Register = () => {
     e.preventDefault();
     setError('');
 
-    // Validation
     if (!formData.name || !formData.email || !formData.password) {
       setError('All fields are required');
       return;
@@ -47,11 +46,9 @@ const Register = () => {
         password: formData.password,
       });
 
-      // Save token and user info
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
 
-      // Redirect to dashboard
       navigate('/dashboard');
     } catch (err) {
       setError(

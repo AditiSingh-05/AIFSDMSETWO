@@ -33,11 +33,9 @@ const Login = () => {
         password: formData.password,
       });
 
-      // Save token and user info
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
 
-      // Redirect to dashboard
       navigate('/dashboard');
     } catch (err) {
       setError(
