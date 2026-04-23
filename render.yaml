@@ -4,8 +4,9 @@ services:
     env: node
     region: oregon
     plan: free
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && node server.js
+    root_dir: backend
+    buildCommand: npm install
+    startCommand: node server.js
     envVars:
       - key: MONGO_URI
         value: mongodb+srv://aditidb:password123456789@aiafsd.syayilb.mongodb.net/lostfound?retryWrites=true&w=majority
