@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import CreateItem from './pages/CreateItem';
 import PrivateRoute from './PrivateRoute';
 
 function App() {
@@ -24,6 +25,22 @@ function App() {
           element={
             <PrivateRoute>
               <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/items/new"
+          element={
+            <PrivateRoute>
+              <CreateItem />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/items/:id/edit"
+          element={
+            <PrivateRoute>
+              <CreateItem />
             </PrivateRoute>
           }
         />
