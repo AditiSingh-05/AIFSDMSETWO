@@ -19,6 +19,26 @@ mongoose
 app.use('/api/auth', authRoutes);
 app.use('/api/items', itemRoutes);
 
+app.get('/api', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Lost & Found API is running',
+    endpoints: {
+      health: '/api/health',
+      auth: {
+        register: 'POST /api/auth/register',
+        login: 'POST /api/auth/login',
+        profile: 'GET /api/auth/me'
+      },
+      items: {
+        list: 'GET /api/items',
+        search: 'GET /api/items/search?query=watch&type=Lost',
+        create: 'POST /api/items'
+      }
+    }
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.status(200).json({
     success: true,
