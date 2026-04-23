@@ -33,24 +33,6 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    filterItems();
-  }, [searchQuery, filterType, items]);
-
-  const fetchItems = async () => {
-    setLoading(true);
-    try {
-      const response = await api.get('/items');
-      setItems(response.data.data);
-      setError('');
-    } catch (err) {
-      setError('Failed to fetch items');
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const filterItems = () => {
     let filtered = items;
 
     if (searchQuery) {
@@ -66,6 +48,20 @@ const Dashboard = () => {
     }
 
     setFilteredItems(filtered);
+  }, [searchQuery, filterType, items]);
+
+  const fetchItems = async () => {
+    setLoading(true);
+    try {
+      const response = await api.get('/items');
+      setItems(response.data.data);
+      setError('');
+    } catch (err) {
+      setError('Failed to fetch items');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleFormChange = (e) => {
